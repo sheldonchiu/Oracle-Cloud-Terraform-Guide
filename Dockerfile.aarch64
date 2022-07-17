@@ -1,0 +1,15 @@
+FROM debian:bullseye
+
+ARG tf_version=1.2.5
+ARG arch=arm64
+
+RUN apt-get update \
+  && apt-get install -y zip wget \
+  && wget https://releases.hashicorp.com/terraform/${tf_version}/terraform_${tf_version}_linux_${arch}.zip \
+  && unzip terraform_${tf_version}_linux_${arch}.zip \
+  && mv terraform /usr/local/bin/ \
+  && rm terraform_${tf_version}_linux_${arch}.zip
+
+WORKDIR /config
+#COPY config/main.tf /config/main.tf
+#RUN terraform init 
