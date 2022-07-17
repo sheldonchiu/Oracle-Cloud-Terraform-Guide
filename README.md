@@ -32,7 +32,9 @@ TF_VAR_fingerprint=
 TF_VAR_private_key_path=/config/key.pem
 TF_VAR_region=
 ```
+
 Please refer to the guide from Oracle: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm
+
 Remember to save the key file under the config folder
 
 2. Obtain the Terraform Config file for the desired cloud instance
